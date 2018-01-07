@@ -9,7 +9,6 @@ function convert(csvFilePath){
   let buffer = [];
   csvtojson().fromFile(csvFilePath)
        .on('json', jsonObj => {
-        //  console.log(jsonObj);
         buffer.push(jsonObj);
        })
        .on('done', error => {
@@ -18,14 +17,14 @@ function convert(csvFilePath){
            return
           };
          output(buffer);
-         console.log(buffer);
        });
 }
 
 function output(jsonArry){
   const folderName = uuidv1();
-  fs.mkdirSync(folderName);
-  fs.writeFileSync(path.join(__dirname, folderName, 'jsonFromCsv.json'), JSON.stringify(jsonArry, null, 2))
-  console.log(jsonArry)
+  if(!fs.existsSync("converted")){fs.mkdirSync(path.join("converted"))}
+
+  fs.mkdirSync(path.join("converted", folderName));
+  fs.writeFileSync(path.join(__dirname, "converted", folderName, 'jsonFromCsv.json'), JSON.stringify(jsonArry, null, 2))
   console.log("finished");
 }
