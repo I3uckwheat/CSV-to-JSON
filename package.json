@@ -1,0 +1,23 @@
+{
+  "name": "CSV-to-JSON",
+  "version": "1.0.0",
+  "description": "",
+  "main": "csv-to-json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/I3uckwheat/CSV-to-JSON.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/I3uckwheat/CSV-to-JSON/issues"
+  },
+  "homepage": "https://github.com/I3uckwheat/CSV-to-JSON#readme",
+  "dependencies": {
+    "csvtojson": "^1.1.9"
+  }
+}
