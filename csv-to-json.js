@@ -26,5 +26,5 @@ function output(jsonArry){
 
   fs.mkdirSync(path.join("converted", folderName));
   fs.writeFileSync(path.join(__dirname, "converted", folderName, 'jsonFromCsv.json'), JSON.stringify(jsonArry, null, 2))
-  console.log("finished");
+  console.log(`Converted file located in ${path.join("converted", folderName)}`);
 }
